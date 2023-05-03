@@ -1,5 +1,6 @@
 import React from 'react';
-
+import MovieCard from '../components/MovieCard';
+import styles from '../styles/common.module.css';
 const Movie = async () => {
 	const url = process.env.RAPID_KEY;
 	const options = {
@@ -12,7 +13,20 @@ const Movie = async () => {
 	const res = await fetch(url, options);
 	const data = await res.json();
 	const main_data = data.titles;
-	return <div> movie page</div>;
+	return (
+		<>
+			<section className={styles.movieSection}>
+				<div className={styles.container}>
+					<h1>Series & Movies</h1>
+					<div className={styles.card_section}>
+						{main_data.map((curElem) => {
+							return <MovieCard key={curElem.id} {...curElem} />;
+						})}
+					</div>
+				</div>
+			</section>
+		</>
+	);
 };
 
 export default Movie;
