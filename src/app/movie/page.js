@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import MovieCard from '../components/MovieCard';
 import styles from '../styles/common.module.css';
 const Movie = async () => {
