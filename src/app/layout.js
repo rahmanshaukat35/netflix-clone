@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import Header from './components/Header';
 import './globals.css';
 import { Mulish } from 'next/font/google';
-import Loading from './loading';
+import Loading from './Loading';
 import Footer from './components/Footer';
 
 const mulish = Mulish({
