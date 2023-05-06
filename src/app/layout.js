@@ -3,6 +3,7 @@ import Header from './components/Header';
 import './globals.css';
 import { Mulish } from 'next/font/google';
 import Loading from './loading';
+import Footer from './components/Footer';
 
 const mulish = Mulish({
 	subsets: ['latin'],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
 			<body className={mulish.className}>
 				<Header />
 				<Suspense fallback={<Loading />}>{children}</Suspense>
+				<Footer />
 			</body>
 		</html>
 	);
